@@ -10,7 +10,7 @@ export default async function handler(
 
   try {
     // regenerate our index route showing the images
-    await res.unstable_revalidate("/");
+    await res.unstable_revalidate();
     return res.json({ revalidated: true });
   } catch (error) {
     // If there was an error, Nextjs will continue to render the page
